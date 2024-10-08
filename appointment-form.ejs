@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appointment Form</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h1>Appointment Form</h1>
+    <form action="/appointment/create" method="post">
+      <label>Name:</label>
+      <input type="text" name="name" required>
+      <label>Email:</label>
+      <input type="email" name="email" required>
+      <label>Phone:</label>
+      <input type="text" name="phone" required>
+      <label>Date:</label>
+      <input type="date" name="date" required>
+      <label>Time:</label>
+      <input type="time" name="time" required>
+      <label>Department:</label>
+      <select name="department" required>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Neurology">Neurology</option>
+        <option value="Oncology">Oncology</option>
+      </select>
+      <label>Doctor:</label>
+      <select name="doctor" required>
+        <option value="Dr. John Doe">Dr. John Doe</option>
+        <option value="Dr. Jane Smith">Dr. Jane Smith</option>
+      </select>
+      <label>Symptoms:</label>
+      <textarea name="symptoms" required></textarea>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </center>
+</body>
+</html>
+

@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title> CareConnect &mdash; Website by College students</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!--  -->
+  <button type="button" class="chatLauncher" style="display:none;">
+    <div>
+      <strong>Have questions?</strong> Talk with Ross our Virtual Assistant.
+    </div>
+  </button>
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "82f6618e-9982-4370-9c02-2b409a4185db",
+      region: "us-east",
+      serviceInstanceID: "07c4c2f6-fe61-4ab8-b440-c516411abc45",
+
+      showLauncher: false,
+      onLoad: function (instance) {
+        // Select the button element from the page.
+        const button = document.querySelector('.chatLauncher');
+
+        // Add the event listener to open your web chat.
+        button.addEventListener('click', function clickListener() {
+          instance.openWindow();
+        });
+
+        // Render the web chat. Nothing appears on the page, because the launcher is
+        // hidden and the web chat window is closed by default.
+        instance.render().then(function () {
+          // Now that web chat has been rendered (but is still closed), we make the
+          // custom launcher button visible.
+          button.style.display = 'block';
+          button.classList.add('open');
+        });
+      }
+    };
+
+    setTimeout(function () { const t = document.createElement('script'); t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"; document.head.appendChild(t); });
+  </script>
+  <!--  -->
+  <div class="site-wrap" id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <header class="site-navbar site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center position-relative">
+
+          <div class="col-3">
+            <div class="site-logo">
+              <a href="index.html"> CareConnect<span class="text-primary">.</span> </a>
+            </div>
+          </div>
+
+          <div class="col-9 text-right">
+
+            <span class="d-inline-block d-lg-none"><a href="#" class=" site-menu-toggle js-menu-toggle py-5 "><span
+                  class="icon-menu h3 text-white"></span></a></span>
+
+            <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="active"><a href="services.html" class="nav-link">Features/tools</a></li>
+                <li><a href="doctor.html" class="nav-link">Top Doctors</a></li>
+                <li><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                <li><a href="blog.html" class="nav-link">News/Blog</a></li>
+                <li><a href="about.html" class="nav-link">About us</a></li>
+                <!-- <li><a href="contact.html" class="nav-link">Contact us</a></li> -->
+              </ul>
+            </nav>
+          </div>
+
+
+        </div>
+      </div>
+
+    </header>
+
+
+    <div class="hero" style="background-image: url('images/health-concept-stethoscope-on-black-260nw-1017037081_auto_x2.jpg');">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-8 intro text-center">
+            <h1 class="text-white">Top Doctors in India </h1>
+            <a href="index.html"></a> <span class="mx-3 text-white">/</span> <strong
+              class="text-white"></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="container-fluid px-0">
+        <div class="row no-gutters align-items-stretch">
+          <div class="col-6 col-sm-6 col-md col-lg h-100">
+            <a  class="service" href="#disease_identifier">
+              <div class="icon-wrap">
+                <span class="flaticon-acupuncture-2"></span>
+              </div>
+              <h3>Disease Identifier</h3>
+            </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md col-lg h-100">
+            <a href="#medics_diet" class="service">
+              <div class="icon-wrap">
+                <span class="flaticon-herbal"></span>
+              </div>
+              <h3>Medics and diet</h3>
+            </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md col-lg h-100">
+            <a href="#exercise_yoga" class="service">
+              <div class="icon-wrap">
+                <span class="flaticon-acupuncture-1"></span>
+              </div>
+              <h3>Exercise/Yoga</h3>
+            </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md col-lg h-100">
+            <a href="#alarm_remind" class="service">
+              <div class="icon-wrap">
+                <span class="flaticon-therapy"></span>
+              </div>
+              <!-- <i class="fa fa-clock-o" style="font-size:85px;color:rgb(253, 253, 253)"></i> -->
+              <h3>Alarm/Remind Me!</h3>
+            </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md col-lg h-100">
+            <a href="#medics_nearby" class="service">
+              <div class="icon-wrap">
+                <span class="flaticon-acupuncture"></span>
+              </div>
+              <h3>Medics nearby me</h3>
+            </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md col-lg h-100">
+            <a href="#find_doc" class="service">
+              <div class="icon-wrap">
+                  <span href="https://www.flaticon.com/authors/becris" class="flaticon-acupuncture"></span>
+                </div>
+              <!-- <div class="icon-wrap"> 
+                <span href="https://www.flaticon.com/authors/becris" class="flaticon-acupunture"></span>
+                </div> -->
+              <h3>Find a Doc!</h3>
+            </a>
+          </div>  
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- original site set -->
+    <!-- <div class="site-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mb-4">
+              <a href="#" class="d-flex service-2">
+                <div class="icon-wrap">
+                  <span class="flaticon-acupuncture"></span>
+                </div>
+                <div class="contents">
+                  <h3>Lorem ipsum dolor</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro culpa, eveniet nostrum omnis aliquid incidunt. Officia minus quae quasi earum!</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <a href="#" class="d-flex service-2">
+                <div class="icon-wrap">
+                  <span class="flaticon-acupuncture-1"></span>
+                </div>
+                <div class="contents">
+                  <h3>Adipisicing Elit</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro culpa, eveniet nostrum omnis aliquid incidunt. Officia minus quae quasi earum!</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <a href="#" class="d-flex service-2">
+                <div class="icon-wrap">
+                  <span class="flaticon-therapy"></span>
+                </div>
+                <div class="contents">
+                  <h3>Eveniet Nostrum Omnis</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro culpa, eveniet nostrum omnis aliquid incidunt. Officia minus quae quasi earum!</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <a href="#" class="d-flex service-2">
+                <div class="icon-wrap">
+                  <span class="flaticon-herbal"></span>
+                </div>
+                <div class="contents">
+                  <h3>Officia Minus</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro culpa, eveniet nostrum omnis aliquid incidunt. Officia minus quae quasi earum!</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <a href="#" class="d-flex service-2">
+                <div class="icon-wrap">
+                  <span class="flaticon-lithotherapy"></span>
+                </div>
+                <div class="contents">
+                  <h3>Eveniet Nostrum Omnis</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro culpa, eveniet nostrum omnis aliquid incidunt. Officia minus quae quasi earum!</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <a href="#" class="d-flex service-2">
+                <div class="icon-wrap">
+                  <span class="flaticon-acupuncture-2"></span>
+                </div>
+                <div class="contents">
+                  <h3>Officia Minus</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro culpa, eveniet nostrum omnis aliquid incidunt. Officia minus quae quasi earum!</p>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div> -->
+    <!-- original site set -->
+
+
+
+    <!-- added tool1 -->
+    <div class="product">
+      <div class="product-img">
+        <img src="images/Dr._Arvinder_Singh_Soin.jpg" alt="">
+        <span class="tag">1.</span>
+
+      </div>
+      <!--  -->
+      <div class="product-listing" id="disease_identifier">
+        <div class="content">
+          <h1 class="name">Dr. Arvinder Singh Soin</h1>
+          <p>Chairman , MBBS, MS, FRCS, FRCS
+            30 Years of Experience
+            Gurgaon, India </p>
+          <p class="info">
+            Dr. A. S. Soin is currently associated as the Chairman of the Liver Transplantation and  Medicine department of Medanta Hospital, Gurgaon.
+            He established liver transplantation treatment in India and has experience of 21 years as a Liver Transplant Surgeon and Hepatobiliary surgeon.
+            He has performed over 1500 liver transplants and over 12000 other complex liver, gall bladder and bile duct surgeries.</p>
+          <!-- search box-->
+          <form class="xyz">
+            <label for="search">Enter</label>
+            <input id="search" type="search" pattern=".*\S.*" required>
+            <span class="caret"></span>
+          </form>
+          <!-- search box-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- added tool1 -->
+  <!-- added tool2 -->
+  <div class="product" id="medics_diet">
+    <div class="product-img">
+      <img src="images/vivek_vij.jpg" alt="">
+      <span class="tag">2.</span>
+
+    </div>
+    <!--  -->
+    <div class="product-listing">
+      <div class="content">
+        <h1 class="name">Dr. Vivek Vij</h1>
+        <p>Director , MBBS, MS, DNB
+            17 Years of Experience
+            New Delhi , India</p>
+        <p class="info">Dr. Vivek Vij is currently associated as Director with Department – Organ Transplantation Fortis Escorts, Delhi.
+            He is currently heading the Fortis Liver Transplant team with cumulative experience of more than 2000 liver transplants.</p>
+        <!-- search box-->
+        <form class="xyz">
+          <label for="search">Search</label>
+          <input id="search" type="search" pattern=".*\S.*" required>
+          <span class="caret"></span>
+        </form>
+        <!-- search box-->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- added tool2 -->
+  <!-- added tool3 -->
+  <div class="product" id="exercise_yoga">
+    <div class="product-img">
+      <img src="images/gupta.jpg" alt="">
+      <span class="tag">3.</span>
+
+    </div>
+    <!--  -->
+    <div class="product-listing">
+      <div class="content">
+        <h1 class="name">Dr. Subhash Gupta</h1>
+        <p>Chairman , Fellowship, MS, MBBS
+            37 years of experience
+            New Delhi , India</p>
+        <p class="info">
+            Dr. Subhash Gupta is the liver transplant/hepato-pancreato-biliary surgeon with 37+ years of experience.
+            He is a renowned surgeon who has acquired an outstanding reputation in the field of Liver Transplantation, Biliary tree and Pancreas.</p>
+        <!-- search box-->
+        <form class="xyz">
+          <label for="search">Search</label>
+          <input id="search" type="search" pattern=".*\S.*" required>
+          <span class="caret"></span>
+        </form>
+        <!-- search box-->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- added tool3 -->
+   <!-- added tool4 -->
+   <div class="product" id="alarm_remind">
+    <div class="product-img">
+      <img src="images/abhideep_chaudhry.jpg" alt="">
+      <span class="tag">4.</span>
+
+    </div>
+    <!--  -->
+    <div class="product-listing">
+      <div class="content">
+        <h1 class="name">Dr Abhideep Chaudhry</h1>
+        <p> Director & HOD
+            HPB Surgery & Liver Transplantation</p>
+        <p class="info">
+           Dr. Abhideep Chaudhary Having successfully treated numerous patients, Dr. Abhideep Chaudhary is a leading name in the field of HPB surgery & liver transplantation. He has been widely acknowledged for his versatile and patient-centric approach.
+            Presently working as a Director & HOD in HPB Surgery and Liver Transplantation at BLK Super Speciality Hospital, New Delhi</p>
+        <!-- search box-->
+        <!-- <form>
+          <label for="search">Search</label>
+          <input id="search" type="search" pattern=".*\S.*" required>
+          <span class="caret"></span>
+        </form> -->
+        <!-- search box-->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- added tool4 -->
+   <!-- added tool5 -->
+   <div class="product" id="medics_nearby">
+    <div class="product-img">
+      <img src="images/dr-ramdip-ray.jpg" alt="">
+      <span class="tag">5.</span>
+
+    </div>
+    <!--  -->
+    <div class="product-listing">
+      <div class="content">
+        <h1 class="name">Dr.Ramdip Ray</h1>
+        <p>Joint Chief – Liver Transplant.
+            Sr. Consultant – GI & HPB Surgery.
+            </p>
+        <p class="info">
+            Dr Ray’s areas of interest include Liver Transplant in small children, management of Bile duct injuries and his research focus is on donor outcome and donor safety in Living Donor Liver Transplant.
+            Dr Ray has numerous conference presentations and has contributed to a number of publications in the field of Liver Transplantation / G I Surgery.
+           </p>
+        <!-- search box-->
+        <!-- <form>
+          <label for="search">Search</label>
+          <input id="search" type="search" pattern=".*\S.*" required>
+          <span class="caret"></span>
+        </form> -->
+        <!-- search box-->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- added tool5 -->
+  <!-- added tool6 -->
+  <div class="product" id="find_doc">
+    <div class="product-img">
+      <img src="images/YUGAL_MISHRA.jpg" alt="">
+      <span class="tag">6.</span>
+
+    </div>
+    <!--  -->
+    <div class="product-listing">
+      <div class="content">
+        <h1 class="name">Dr Y k Mishra</h1>
+        <p> Director , MBBS, MD, Fellowship, Fellowship
+            32 Years of Experience
+            New Delhi , India 
+            </p>
+        <p class="info">
+            Dr. Y.K. Mishra is one of the renowned & most experienced cardiac surgeons in India.
+            He has an experience of over 32 years; he is widely recognized & has successfully performed over 14,000 open heart surgeries, & more than 500 robotic surgeries.</p>
+        <!-- search box-->
+        <form class="xyz">
+          <label for="search">Search</label>
+          <input id="search" type="search" pattern=".*\S.*" required>
+          <span class="caret"></span>
+        </form>
+        <!-- search box-->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- added tool6 -->
+  <div class="site-section bg-primary py-5" id="">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mb-4 mb-md-0">
+          <h2 class="mb-0 text-white">What are you waiting for?</h2>
+          <p class="mb-0 opa-7">Kick start a healthy lifestyle with HealthUtopia today!!</p>
+        </div>
+        <div class="col-lg-5 text-md-right">
+          <a href="about.html" class="btn btn-primary btn-white">Contact us now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="site-footer py-5">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-4">
+
+          <div class="text-center quick-contact-info">
+            <div class="mb-3 icon-wrap">
+              <span class="icon-phone"></span>
+            </div>
+            <span class="caption">23456633****</span>
+          </div>
+
+        </div>
+        <div class="col-lg-4">
+
+          <div class="text-center quick-contact-info">
+            <div class="mb-3 icon-wrap">
+              <span class="icon-room"></span>
+            </div>
+            <span class="caption">Bareilly,Uttar Pradesh ,India
+              </span>
+          </div>
+
+        </div>
+        <div class="col-lg-4">
+
+          <div class="text-center quick-contact-info">
+            <div class="mb-3 icon-wrap">
+              <span class="icon-envelope-o"></span>
+            </div>
+            <span class="caption">abc@mydomain.com</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="row pt-5 mt-5 text-center">
+        <div class="col-lg-7 text-lg-left">
+          <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved <i  aria-hidden="true"></i><a href="https://colorlib.com"
+              target="_blank"></a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+        <div class="col-lg-5 text-lg-right">
+          <a href="#" class="ml-3">Terms</a>
+          <a href="#" class="ml-3">Privacy</a>
+        </div>
+        <!-- <div class="col-md-12">
+            <div class="border-top pt-5">
+              
+            </div>
+          </div> -->
+
+      </div>
+    </div>
+  </footer>
+
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
